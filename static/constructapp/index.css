@@ -1,0 +1,115 @@
+*{
+    font-family: Nunito sans;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  
+      position: fixed;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .main-content{
+    background-image: url("https://w0.peakpx.com/wallpaper/243/234/HD-wallpaper-building-construction-city.jpg");
+    background-size: cover;
+    width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+  
+
+  header {
+      display: flex;
+      justify-content: flex-end;
+      background-color:#000000;
+      color: gray;
+      padding: 45px;
+      text-align: center;
+      margin: 0px;
+  }
+
+  footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 0.1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+  
+  }
+  
+  .head {
+ 
+    width: 100%;
+    padding: 0px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content:center ;
+  
+  }
+  
+  .pro{
+      display: flex;
+      justify-content: center;
+      font-size: 35px;
+      color: rgb(0, 0, 0);
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  }
+  
+  .img{
+      opacity: 1.0;
+      transition: all 0.4s ease;
+      height: 100%;
+  }
+  
+  nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding-right:10px ;
+  }
+  
+  .items{
+      display: flex;
+      justify-content: space-around;
+  }
+  
+  .login{
+    padding-left: 10px;
+    padding-right:40px;
+    text-decoration:none;
+  }
+  
+  .signup{
+    text-decoration: none;
+    padding-left: 20px;
+  }
+  
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cont2{
+    font-size: 150%;
+    background-color:#333;
+    padding: 30px;
+    height: 20%;
+  }
+  
+  h2{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }

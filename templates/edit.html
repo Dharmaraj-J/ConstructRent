@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructrent</title>
+    <link rel="stylesheet" href="{% static '/constructapp/edit.css' %}">
+</head>
+</head>
+<body>
+    {% load static %}
+    <!-- <h2>Edit Your Equipment</h2>
+    <form method="post">
+        {% csrf_token %}
+         {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form> -->
+
+    <div class="container">
+        <h2>Edit Your Equipement</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Save Changes</button>
+        </form>
+    </div> 
+</body>
+</html>

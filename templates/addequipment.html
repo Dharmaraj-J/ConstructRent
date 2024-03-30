@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructrent</title>
+    <link rel="stylesheet" href="{% static '/constructapp/addequipment.css' %}">
+</head>
+
+<body>
+    {% load static %}
+
+    <div class="continer">
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Responsive Nav</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        </head>
+
+        <body>
+            <header>
+                {% if messages %}
+                <div class="messages"
+                    style=" color:blue;">
+                    {% for message in messages %}
+                    <p class="{{ message.tags }}">{{ message }}</p>
+                    {% endfor %}
+            </div>
+                {% endif %}
+            </header>
+            <nav>
+                <ul>
+                    <a href="/rentalmanagerpage">
+                        <li>Home</li>
+                    </a>
+                    <a href="/addequipment">
+                        <li>Add Equipment</li>
+                    </a>
+                    <a href="/deleteequipment">
+                        <li>Edit details of equipment</li>
+                    </a>
+                    <button class="but"><a href="/handlelogout">Logout</a></button>
+                </ul>
+                <div class="handle">Menu</div>
+            </nav>
+            <div class="con">
+            <h1 id="title">Add equipment</h1>
+            <p id="description">Fill out the form below...</p>
+
+            <form action="add" method="post" id="survey-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset>
+                    <label for="name" id="name-label">Enter Equipment name
+                        <input type="text" name="equipmentname" id="name" required
+                            placeholder="Enter Equipment Name" /></label>
+                    <label for="rent" id="rent-label">Rent
+                        <input type="number" name="rent" id="email" required placeholder="Enter per day rent amount" /></label>
+                    <label for="number" id="number-label">Enter Description
+                        <input type="text" name="description" id="number" min="13" max="120" required
+                            placeholder="Enter Description" /></label>
+                </fieldset>
+                <fieldset>
+                    <label for="name" id="name-label">How old equipment is?
+                        <input type="number" name="old" id="name" required
+                            placeholder="Enter the equipement age in years" /></label>
+
+                    <label for="email" id="email-label">Image 
+                        <input type="file" id="img" name="img1" accept="image/*"></label>
+                        <input type="file" id="img" name="img2" accept="image/*"></label>
+                </fieldset>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+        </body>
+
+        </html>
+    </div>
+    <script>
+        $('.handle').on('click', function () {
+            $('nav ul').toggleClass('showing');
+        });
+    </script>
+</body>
+
+</html>

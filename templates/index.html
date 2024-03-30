@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructrent</title>
+    <link rel="stylesheet" href="{% static '/constructapp/index.css' %}">
+</head>
+<body>
+    {% load static %}
+    <div class="head">
+        {% if messages %}
+        <div class="messages"
+            style=" color:red;">
+            {% for message in messages %}
+            <p class="{{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+    </div>
+        {% endif %}
+</div>    
+    <header>
+        <nav>
+             <div class="buttons">
+                <a style="color:white;" class="login" href="loginpage">Login</a>
+                <a style="color:white;" class="signup" href="registerpage">Sign Up</a>
+            </div>
+         </nav>
+    </header>
+
+    <div class="cont2">
+        <h2 style="font-family:verdana;">Construction Equipment Rentals</h2>
+    </div>
+
+    <div>
+        <img src="https://wallpaperaccess.com/full/3434349.jpg" alt="FMRS" width= "100%" height="100%" class="img">
+    </div>  
+     
+
+     <section class="main-content">
+        <!-- <h2 class="pro" style="font-family: cursive; color:yellow;"><em>"We don't just work with concrete and steel, but with hope and dreams"</h2> -->
+    </section>
+
+    <footer>
+        <p><em>2024 CERS. All rights reserved!.</p>
+    </footer>
+</body>
+</html>
